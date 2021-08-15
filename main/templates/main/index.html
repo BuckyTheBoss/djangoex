@@ -10,14 +10,15 @@
     <h1>Hello world this is my homepage template</h1>
     <p>wooooooo!</p>
 
-    {{user.first_name}}
-    {{user.last_name}}
+    {{u.first_name.lower}}
+    {{u.last_name.upper}}
 
-    {% for subject in subjects %}
+    {% for subject in subs %}
 
         <h4>Title: {{subject.title}}</h4>
         <h4>Author: {{subject.author}}</h4>
-        
+
     {% endfor %}
+    
 </body>
 </html>

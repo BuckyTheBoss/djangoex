@@ -18,10 +18,14 @@ def homepage(request):
         }
     ]
     context = {
-        'user' : user,
-        'subjects': subjects
+        'u' : user,
+        'subs': subjects
     }
     return render(request, 'main/index.html', context)
 
-def about(request):
-    return render(request, 'main/about.html')
+def about(request, name):
+    if len(name) > 10:
+        text = 'damn thats a long name'
+    else:
+        text = 'you chill'
+    return render(request, 'main/about.html', {'name': name, 'message': text})

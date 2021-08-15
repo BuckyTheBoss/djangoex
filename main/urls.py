@@ -3,5 +3,5 @@ from .views import homepage, about
 
 urlpatterns = [
     path('', homepage),
-    path('about', about)
+    path('about/<str:name>', about)
 ]
