@@ -4,5 +4,6 @@ from .views import homepage, about, calc
 urlpatterns = [
     path('', homepage),
     path('about/<str:name>', about),
+    path('calc/', calc),
     path('calc/<int:num>', calc)
 ]

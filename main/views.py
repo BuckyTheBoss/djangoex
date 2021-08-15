@@ -30,8 +30,8 @@ def about(request, name):
         text = 'you chill'
     return render(request, 'main/about.html', {'name': name, 'message': text})
 
-def calc(request, num):
-    
+def calc(request, num=100):
+
     context = {
         'div': num / 10,
         'mult': num * 10,
