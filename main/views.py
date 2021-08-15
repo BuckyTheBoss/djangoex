@@ -29,3 +29,13 @@ def about(request, name):
     else:
         text = 'you chill'
     return render(request, 'main/about.html', {'name': name, 'message': text})
+
+def calc(request, num):
+    
+    context = {
+        'div': num / 10,
+        'mult': num * 10,
+        'add': num + 10,
+        'sub': num - 10
+    }
+    return render(request, 'main/calc.html', context)
